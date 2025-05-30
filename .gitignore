@@ -1,0 +1,6 @@
+.env
+__pychache__/
+myenv/
+document/
+*.pyc
+*.pyo
