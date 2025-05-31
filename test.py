@@ -1,7 +1,6 @@
 #! D:\CodeWeb\bt\myenv\Scripts\python.exe
 import os
 import google.generativeai as genai
-import pandas as pd
 from langchain_community.vectorstores import FAISS
 import json
 import PyPDF2 as pdf
