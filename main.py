@@ -6,7 +6,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import test
 import os
 app=FastAPI()
-embedding_model=HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+# embedding_model=HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+embedding_model=HuggingFaceEmbeddings(model_name="sentence-transformers/paraphrase-MiniLM-L3-v2")
 
 class Message(BaseModel):
     message: str
