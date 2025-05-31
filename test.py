@@ -4,12 +4,9 @@ import google.generativeai as genai
 from langchain_community.vectorstores import FAISS
 import json
 import PyPDF2 as pdf
-import init_model
 from dotenv import load_dotenv
 
 load_dotenv()
-
-embedding_model=init_model.embedding_model()
 def create_vectordb():
     with open("./document/code.json.txt","r",encoding='utf-8') as f:
         data=pdf.PdfReader(f)
