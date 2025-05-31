@@ -15,12 +15,12 @@ def create_vectordb(embedding_model):
         for page in data.pages:
             chunk=page.split('\n')
         db=FAISS.from_texts(texts=chunk,embedding=embedding_model)
-        db.save_local('./dbvector/faiss_index2')
+        db.save_local('./dbvector/faiss_index3')
 
 def add_text_to_vectordb(texts,embedding_model):
-    db=FAISS.load_local('./dbvector/faiss_index',embedding_model,allow_dangerous_deserialization=True)
+    db=FAISS.load_local('./dbvector/faiss_index3',embedding_model,allow_dangerous_deserialization=True)
     db.add_texts(texts)
-    db.save_local('./dbvector/faiss_index')
+    db.save_local('./dbvector/faiss_index3')
 
 def search_vector(query,embedding_model):
     db=FAISS.load_local('./dbvector/faiss_index3',embedding_model,allow_dangerous_deserialization=True)
